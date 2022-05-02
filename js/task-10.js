@@ -49,6 +49,8 @@ function destroyBoxes() {
     refs.divBox.children[i].remove();
     [i] = [i - 1];
   }
+  firstDivWidth = 30;
+firstDivHeight = 30;
 }
 
 function getRandomHexColor() {
