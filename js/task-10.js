@@ -9,16 +9,18 @@ refs.createBtn.addEventListener("click", (event) => {
   createBoxes(event);
 });
 
-let firstDivWidth = 30;
-let firstDivHeight = 30;
 function createBoxes(amount) {
   amount = refs.inputValue.value;
 
+  let firstDivWidth = 30;
+  let firstDivHeight = 30;
+  
   for (let i = 0; i < amount; i++) {
     const newDiv = document.createElement("div");
     if (firstDivWidth > newDiv.style.width) {
       firstDivWidth += 10;
       firstDivHeight += 10;
+    
     } else {
       
       firstDivWidth = 30;
@@ -49,10 +51,9 @@ function destroyBoxes() {
     refs.divBox.children[i].remove();
     [i] = [i - 1];
   }
-  firstDivWidth = 30;
-firstDivHeight = 30;
 }
-
+ 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
